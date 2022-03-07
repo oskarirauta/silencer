@@ -25,16 +25,12 @@ type LogFile struct {
 	Duration time.Duration `yaml:"duration"`
 }
 
-type IPTables struct {
-	Chain string `yaml:"chain"`
-}
-
-type IPSet struct {
+type NFTSet struct {
 	Set string `yaml:"set"`
 }
+
 type Filter struct {
-	IPTables *IPTables `yaml:"iptables,omitempty"`
-	IPSet    *IPSet    `yaml:"ipset,omitempty"`
+	NFTSet    *NFTSet    `yaml:"nftset,omitempty"`
 }
 
 type Config struct {
@@ -90,8 +86,7 @@ func Load() Config {
 		}
 	}
 
-	if (config.Filter.IPSet != nil && config.Filter.IPTables != nil) ||
-		(config.Filter.IPSet == nil && config.Filter.IPTables == nil) {
+	if (config.Filter.NFTSet == nil ) {
 		log.Fatal("exactly one filter must be configured")
 	}
 

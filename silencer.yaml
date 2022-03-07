@@ -1,6 +1,6 @@
 filter:
-  iptables:
-    chain: silencer
+  nftset:
+    set: silencer
 
 duration: 168h # default duration
 
