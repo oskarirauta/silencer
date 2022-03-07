@@ -16,6 +16,8 @@ Todo list:
 Unfortunately my time is always limited, I think this is a good start - also, I really do hate Go (and python and perl) from all of my heart, so no wonder my code might look ugly :)
 So, contribution to project is more than welcome :)
 
+Preferred way to contribute would be to fork this project and do a PR, but mandatory rules for contributing is not set :)
+
 ## About
 
 Silencer is a simple replacement for [fail2ban](https://www.fail2ban.org) written in Go.
