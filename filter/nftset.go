@@ -12,7 +12,7 @@ type nftset struct {
 }
 
 func NewNftset(set string) *nftset {
-	cmd := exec.Command("nft", "add", "set", "inet", "fw4", set, "{ type ipv4_addr \; }")
+	cmd := exec.Command("nft", "add", "set", "inet", "fw4", set, "{ type ipv4_addr ; }")
 	//cmd := exec.Command("ipset", "create", set, "hash:ip")
 	output, err := cmd.CombinedOutput()
 	if err != nil {
@@ -67,5 +67,5 @@ func (b nftset) List() []net.IP {
 		return nil
 	}
 
-	return parseIpsetList(output)
+	return parseNftsetList(output)
 }
