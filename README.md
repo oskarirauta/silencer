@@ -9,6 +9,7 @@ Todo list:
  - add support not to report error when creating set, if it already exists (created by firewall script?)
  - if not going for openwrt style config; could we then instead atleast streamline yaml as it seems unnecessary to configurate with filter:nftset:set -> set name, when it could be filter:nftset(or just set?) -> set name
  - IPv6 support
+ - ubus stats?
 
 ## Help wanted
 
